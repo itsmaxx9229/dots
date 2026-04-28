@@ -1,0 +1,1 @@
+This is the most straightforward dotfile repo so far. Tired of having to download the ZIP and find the file that you want? Well, now you can do it directly in my repo! Browse and download individual files on this simple repo.
