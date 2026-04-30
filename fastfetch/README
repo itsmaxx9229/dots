@@ -1,1 +1,1 @@
-To apply the fastfetch config, simply open the file, copy the contents, go into your fastfetch config (~/.config/fastfetch/config.jsonc) and paste the copied contents.
+To apply the fastfetch config, simply open the file, copy the contents, go into your fastfetch config (~/.config/fastfetch/config.jsonc) and paste the copied contents. You can also download it and swap it with your current config.
