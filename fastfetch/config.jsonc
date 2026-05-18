@@ -11,9 +11,13 @@
     { "type": "os",       "key": "│ 󰣇  OS"       },
     { "type": "host",     "key": "│ 󰋰  Host"     },
     { "type": "kernel",   "key": "│ 󰌽  Kernel"   },
+    { "type": "bios",     "key": "│   BIOS"     },
+    { "type": "bootmgr",  "key": "│ 󰒲  Boot"     },
     { "type": "uptime",   "key": "│ 󰅐  Uptime"   },
     { "type": "packages", "key": "│ 󰏗  Packages" },
     { "type": "shell",    "key": "│ 󰆍  Shell"    },
+    { "type": "locale",   "key": "│ 󰗊  Locale"   },
+    { "type": "bluetooth","key": "│ 󰂯  Bluetooth"},
     {
       "type": "custom",
       "format": "╰─────────────────────────────────────────╯"
@@ -25,16 +29,18 @@
       "type": "custom",
       "format": "╭──────────────── 󰧨 Desktop ─────────────╮"
     },
-    { "type": "display",      "key": "│ 󰍹  Display"  },
-    { "type": "de",           "key": "│ 󰇄  DE"        },
-    { "type": "wm",           "key": "│ 󱂬  WM"        },
-    { "type": "wmtheme",      "key": "│ 󰉼  WM Theme"  },
-    { "type": "theme",        "key": "│ 󰔯  Theme"     },
-    { "type": "icons",        "key": "│ 󰀲  Icons"     },
-    { "type": "font",         "key": "│ 󰛖  Font"      },
-    { "type": "cursor",       "key": "│ 󰳽  Cursor"    },
-    { "type": "terminal",     "key": "│ 󰆍  Terminal"  },
-    { "type": "terminalfont", "key": "│ 󰛖  Term Font" },
+    { "type": "display",      "key": "│ 󰍹  Display"       },
+    { "type": "de",           "key": "│ 󰇄  DE"            },
+    { "type": "wm",           "key": "│ 󱂬  WM"            },
+    { "type": "wmtheme",      "key": "│ 󰉼  WM Theme"      },
+    { "type": "theme",        "key": "│ 󰔯  Theme"         },
+    { "type": "icons",        "key": "│ 󰀲  Icons"         },
+    { "type": "font",         "key": "│ 󰛖  Font"          },
+    { "type": "cursor",       "key": "│ 󰳽  Cursor"        },
+    { "type": "terminal",     "key": "│ 󰆍  Terminal"      },
+    { "type": "font",         "key": "│ 󰛖  Terminal Font", "format": "JetBrainsMono NF 10" },
+    { "type": "brightness",   "key": "│ 󰃞  Brightness"    },
+    { "type": "wallpaper",    "key": "│ 󰸉  Wallpaper"     },
     {
       "type": "custom",
       "format": "╰─────────────────────────────────────────╯"
@@ -46,13 +52,49 @@
       "type": "custom",
       "format": "╭──────────────── 󰘚 Hardware ────────────╮"
     },
-    { "type": "cpu",          "key": "│ 󰻠  CPU"     },
-    { "type": "gpu",          "key": "│ 󰍛  GPU"     },
-    { "type": "memory",       "key": "│ 󰍜  Memory"  },
-    { "type": "swap",         "key": "│ 󰾴  Swap"    },
-    { "type": "disk",         "key": "│ 󰋊  Disk"    },
-    { "type": "battery",      "key": "│ 󰁹  Battery" },
-    { "type": "poweradapter", "key": "│ 󰚥  Power"   },
+    { "type": "cpu",          "key": "│ 󰻠  CPU"          },
+    { "type": "gpu",          "key": "│ 󰍛  GPU"          },
+    { "type": "memory",       "key": "│ 󰍜  Memory"       },
+    { "type": "swap",         "key": "│ 󰾴  Swap"         },
+    { "type": "disk",         "key": "│ 󰋊  Disk"         },
+    { "type": "battery",      "key": "│ 󰁹  Battery"      },
+    { "type": "poweradapter", "key": "│ 󰚥  Power"        },
+    { "type": "monitor",      "key": "│ 󰍹  Monitor"      },
+    { "type": "sound",        "key": "│ 󰓃  Sound"        },
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────────╯"
+    },
+
+    { "type": "break" },
+  
+    {
+      "type": "custom",
+      "format": "╭──────────────── 󰓅 Performance ─────────╮"
+    },
+    { "type": "cpuusage",     "key": "│ 󰾆  CPU Usage"    },
+    {
+      "type": "command",
+      "key": "│ 󰍛  GPU Usage",
+      "text": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{print $1\"%\"}'"
+    },
+    { "type": "memory",       "key": "│ 󰍜  RAM Usage",    "format": "{1} / {2} ({3})" },
+    { "type": "processes",    "key": "│ 󰒋  Processes"    },
+    { "type": "loadavg",      "key": "│ 󰇄  Load Average" },
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────────╯"
+    },
+
+    { "type": "break" },
+
+    {
+      "type": "custom",
+      "format": "╭──────────────── 󰹑 Graphics & Media ────╮"
+    },
+    { "type": "vulkan",       "key": "│ 󱘖  Vulkan"       },
+    { "type": "opengl",       "key": "│ 󰟵  OpenGL"       },
+    { "type": "opencl",       "key": "│ 󰟷  OpenCL"       },
     {
       "type": "custom",
       "format": "╰─────────────────────────────────────────╯"
